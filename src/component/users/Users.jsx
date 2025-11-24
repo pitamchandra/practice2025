@@ -1,5 +1,6 @@
 import React, { use, useState } from 'react';
 import Pagination from '../pagination/Pagination';
+import { Link } from 'react-router';
 
 const Users = ({usersPromises}) => {
     const users = use(usersPromises)
@@ -21,8 +22,8 @@ const Users = ({usersPromises}) => {
                         <div key={currentUser.id} className="border-amber-600 border-2 p-4 rounded-2xl">
                             <h2 className='font-bold'>{currentUser.name}</h2>
                             <p>{currentUser.email}</p>
+                            <Link to={`/users/${currentUser.id}`} className='btn'>Details</Link>
                         </div>
-                        
                     ))
                 }
                 

@@ -29,6 +29,7 @@ const Navbar = () => {
                         <NavLink className={'mx-2 font-bold text-xl'} to={'/service'}>service</NavLink>
                         <NavLink className={'mx-2 font-bold text-xl'} to={'/users'}>users</NavLink>
                         <NavLink className={'mx-2 font-bold text-xl'} to={'/posts'}>posts</NavLink>
+                        <NavLink className={'mx-2 font-bold text-xl'} to={'/todos'}>todos</NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">

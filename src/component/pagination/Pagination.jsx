@@ -4,7 +4,7 @@ const Pagination = ({setCurrentPage, currentPage, totalPages}) => {
     return (
         <div className='mt-5'>
             {/* pagination */}
-                <div className="flex gap-5">
+                <div className="flex gap-2">
                     <button className='btn' disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1)}>Prev</button>
                     {
                         [...Array(totalPages)].map((_, idx) => (

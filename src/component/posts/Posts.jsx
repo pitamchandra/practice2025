@@ -1,5 +1,6 @@
 import React, { use, useState } from 'react';
 import Pagination from '../pagination/Pagination';
+import { Link } from 'react-router';
 
 const Posts = ({ postPromises }) => {
     const posts = use(postPromises);
@@ -9,7 +10,7 @@ const Posts = ({ postPromises }) => {
     const endIndex = currentPage * postPerPage;
     const currentPosts = posts.slice(startIndex, endIndex);
     const totalPage = Math.ceil( posts.length / postPerPage )
-
+// console.log(currentPosts)
     return (
         <div>
             <div className="grid grid-cols-3 gap-4">
@@ -19,7 +20,7 @@ const Posts = ({ postPromises }) => {
                             <h2 className="card-title">{post.title}</h2>
                             <p>{post.body}</p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Buy Now</button>
+                                <Link to={`/posts/${post.id}`}><button className="btn btn-primary">See details</button></Link>
                             </div>
                         </div>
                     </div>
